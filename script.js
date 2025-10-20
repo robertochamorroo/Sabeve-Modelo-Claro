@@ -46,7 +46,7 @@ function toggleMenu() {
         }
 
         // Auto-advance carousel every 5 seconds
-        setInterval(nextSlide, 8000);
+        setInterval(nextSlide, 10000);
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -83,4 +83,5 @@ const fadeInObserver = new IntersectionObserver((entries, observer) => {
 fadeInSections.forEach(section => {
     fadeInObserver.observe(section);
 });
+
 
