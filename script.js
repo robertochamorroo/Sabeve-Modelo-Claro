@@ -46,7 +46,7 @@ function toggleMenu() {
         }
 
         // Auto-advance carousel every 5 seconds
-        setInterval(nextSlide, 5000);
+        setInterval(nextSlide, 8000);
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -64,3 +64,23 @@ function toggleMenu() {
             });
         });
         
+
+
+// Animação de fade-in ao rolar
+const fadeInSections = document.querySelectorAll(".fade-in-section");
+
+const fadeInObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1 // A seção se torna visível quando 10% dela está na viewport
+});
+
+fadeInSections.forEach(section => {
+    fadeInObserver.observe(section);
+});
+
