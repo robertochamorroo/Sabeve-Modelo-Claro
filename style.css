@@ -468,3 +468,73 @@
                 grid-template-columns: 1fr;
             }
         }
+
+/* Animações e Transições Suaves */
+
+/* Efeito de hover para links de navegação */
+.nav-links a {
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+    transform: translateY(-3px);
+}
+
+/* Efeito de hover para botões */
+.cta-button {
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito de hover para cartões de serviço */
+.service-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Animação de fade-in para seções ao rolar */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animação para membros da equipe */
+.team-member {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Animação para o cabeçalho */
+header {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: headerFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes headerFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
