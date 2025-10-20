@@ -84,4 +84,3 @@ fadeInSections.forEach(section => {
     fadeInObserver.observe(section);
 });
 
-
